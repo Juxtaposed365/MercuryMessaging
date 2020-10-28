@@ -82,6 +82,7 @@ public class TimeScheduling extends AppCompatActivity {
         i.putExtra("time", timeRep);
         i.putExtra("date", dateRep);
         startActivity(i);
+        finish();
 
 
         //go back to setReminder after passing the values along

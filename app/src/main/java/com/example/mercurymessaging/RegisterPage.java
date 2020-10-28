@@ -34,10 +34,12 @@ public class RegisterPage extends AppCompatActivity {
     public void openSignIn(){
         Intent intent = new Intent(this,LoginPage.class);
         startActivity(intent);
+        finish();
     }
 
     public void openHome(){
         Intent intent = new Intent(this, Home.class);
         startActivity(intent);
+        finish();
     }
 }

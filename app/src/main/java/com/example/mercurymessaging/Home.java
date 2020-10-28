@@ -26,7 +26,7 @@ public class Home extends AppCompatActivity {
         Logout.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                finish();
+                launchLogin();
             }
         });
     }
@@ -37,5 +37,11 @@ public class Home extends AppCompatActivity {
         //Log.d("BUG", "NReminder executed, but probably crashed");
         Intent intent = new Intent(this, SetReminder.class);
         startActivity(intent);
+    }
+
+    public void launchLogin(){
+        Intent intent = new Intent(this, LoginPage.class);
+        startActivity(intent);
+        finish();
     }
 }

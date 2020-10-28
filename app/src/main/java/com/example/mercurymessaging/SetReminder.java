@@ -17,7 +17,7 @@ public class SetReminder extends AppCompatActivity{
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_setreminder);
+        setContentView(R.layout.activity_setreminder1);
         Button cancelButton = (Button)this.findViewById(R.id.cancelButton);
         et = (EditText)this.findViewById(R.id.e1);
         cancelButton.setOnClickListener(new View.OnClickListener() {

@@ -36,9 +36,11 @@ public class LoginPage extends AppCompatActivity {
     public void openRegister(){
         Intent intent = new Intent(this, RegisterPage.class);
         startActivity(intent);
+        finish();
     }
     public void openHome(){
         Intent intent = new Intent(this, Home.class);
         startActivity(intent);
+        finish();
     }
 }
