@@ -1,0 +1,80 @@
+Index: app/src/main/res/layout/activity_confirmation_screen_simulated.xml
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+--- app/src/main/res/layout/activity_confirmation_screen_simulated.xml	(revision 524af649ac22edc2053f93706e9e163cc24b4d03)
++++ app/src/main/res/layout/activity_confirmation_screen_simulated.xml	(date 1603899702858)
+@@ -3,56 +3,58 @@
+     xmlns:tools="http://schemas.android.com/tools"
+     android:layout_width="match_parent"
+     android:layout_height="match_parent"
++    android:orientation="vertical"
+     tools:context=".confirmation_screen_simulated">
+ 
+-
++    <LinearLayout
++        android:id="@+id/btnLV"
++        android:layout_width="match_parent"
++        android:orientation="vertical"
++        android:layout_height="wrap_content">
+     <TextView
+         android:id="@+id/ReminderMessage"
+         android:layout_width="wrap_content"
+         android:layout_height="wrap_content"
+-        android:layout_marginLeft="150dp"
++        android:layout_marginLeft="130dp"
+         android:layout_marginTop="300dp"
+         android:layout_weight="0"
+         android:text="Reminder Message"
+-        android:textSize="15sp"
+-        tools:layout_editor_absoluteX="188dp"
+-        tools:layout_editor_absoluteY="336dp" />
++        android:textSize="20sp" />
+ 
+     <TextView
+         android:id="@+id/ReminderDate"
+         android:layout_width="wrap_content"
+         android:layout_height="wrap_content"
+-        android:layout_marginLeft="175dp"
+-        android:gravity="center"
++        android:layout_marginLeft="130dp"
+         android:maxLines="1"
+         android:text="Reminder Date"
+         android:textColor="#777"
+-        android:textSize="15sp" />
++        android:textSize="20sp" />
+ 
+ 
+     <TextView
+         android:id="@+id/ReminderTime"
+         android:layout_width="wrap_content"
+         android:layout_height="wrap_content"
++        android:layout_marginLeft="130dp"
+         android:maxLines="1"
+         android:text="Reminder Time"
+         android:textColor="#777"
+-        android:textSize="15sp"
+-        tools:layout_editor_absoluteX="191dp"
+-        tools:layout_editor_absoluteY="377dp"
++        android:textSize="20sp"
+         />
+-
++    </LinearLayout>
+     <LinearLayout
+         android:id="@+id/btnLL"
+         android:layout_width="match_parent"
+-        android:layout_height="wrap_content">
++        android:layout_height="wrap_content"
++        android:layout_marginTop="20dp">
+ 
+         <Button
+             android:id="@+id/Cancel"
+             android:layout_width="0dp"
+             android:layout_height="wrap_content"
+             android:layout_weight="1"
+-            android:text="@string/Create_Reminder"
++            android:text="Cancel"
+             tools:ignore="OnClick" />
+ 
+         <Button

@@ -1,0 +1,48 @@
+{
+  "project_info": {
+    "project_number": "727593281671",
+    "firebase_url": "https://test-firestore-database.firebaseio.com",
+    "project_id": "test-firestore-database",
+    "storage_bucket": "test-firestore-database.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:727593281671:android:2fa8b7f513222a46327022",
+        "android_client_info": {
+          "package_name": "com.example.mercurymessaging"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "727593281671-12rpfbjaqi05g0i2rsrg9ur0tlltf4tk.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.example.mercurymessaging",
+            "certificate_hash": "a7da83c314209c4c23a7ac6ec3a7442dffe1bfa3"
+          }
+        },
+        {
+          "client_id": "727593281671-590fpkp9rtbb6v10kkqbliu1ol7aoibm.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyDNzsAeX3CYpxL08flc_c4xJds-vwM1Qkw"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "727593281671-590fpkp9rtbb6v10kkqbliu1ol7aoibm.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
