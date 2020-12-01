@@ -24,4 +24,16 @@
     <string name="invalid_password">Password must be >5 characters</string>
     <string name="login_failed">"Login failed"</string>
     <string name="set_datetime">Set Date/Time</string>
+    <string name="reminder_message">Reminder Message</string>
+    <string name="reminder_date">Reminder Date</string>
+    <string name="reminder_time">Reminder Time</string>
+    <string name="reminder_services">Reminder Services</string>
+    <string name="create_an_account">Create an account</string>
+    <string name="username">Username</string>
+    <string name="already_have_an_account">Already have an account?</string>
+    <string name="continue_label">Continue</string>
+    <string name="upcoming_reminders">Upcoming Reminders</string>
+    <string name="send_reminder_now">Send Reminder Now</string>
+    <string name="log_out">Log Out</string>
+    <string name="phone_number">Phone number</string>
 </resources>
