@@ -1,6 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/confirmedLayout"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:orientation="vertical"
@@ -11,26 +12,26 @@
         android:layout_width="match_parent"
         android:orientation="vertical"
         android:layout_height="wrap_content">
-    <TextView
-        android:id="@+id/ReminderMessage"
-        android:layout_gravity="center"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="300dp"
-        android:layout_weight="1"
-        android:text="Reminder Message"
-        android:textSize="20sp" />
 
-    <TextView
+        <TextView
+            android:id="@+id/ReminderMessage"
+            android:layout_width="wrap_content"
+            android:layout_height="0dp"
+            android:layout_gravity="center"
+            android:layout_marginTop="300dp"
+            android:layout_weight="1"
+            android:text="@string/reminder_message"
+            android:textSize="20sp" />
+
+        <TextView
         android:id="@+id/ReminderDate"
         android:layout_gravity="center"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:maxLines="1"
-        android:text="Reminder Date"
+        android:text="@string/reminder_date"
         android:textColor="#777"
         android:textSize="20sp" />
-
 
     <TextView
         android:id="@+id/ReminderTime"
@@ -38,10 +39,19 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:maxLines="1"
-        android:text="Reminder Time"
+        android:text="@string/reminder_time"
         android:textColor="#777"
         android:textSize="20sp"
         />
+    <TextView
+        android:id="@+id/ReminderServices"
+        android:layout_gravity="center"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:maxLines="1"
+        android:text="@string/reminder_services"
+        android:textColor="#777"
+        android:textSize="20sp" />
     </LinearLayout>
     <LinearLayout
         android:id="@+id/btnLL"
@@ -54,7 +64,7 @@
             android:layout_width="0dp"
             android:layout_height="wrap_content"
             android:layout_weight="1"
-            android:text="Cancel"
+            android:text="@string/cancel"
             tools:ignore="OnClick" />
 
         <Button
@@ -62,7 +72,7 @@
             android:layout_width="0dp"
             android:layout_height="wrap_content"
             android:layout_weight="1"
-            android:text="Confirm" />
+            android:text="@string/Confirm_Button" />
     </LinearLayout>
 
 </LinearLayout>

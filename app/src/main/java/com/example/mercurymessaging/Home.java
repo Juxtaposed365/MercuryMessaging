@@ -9,32 +9,42 @@ import android.widget.TextView;
 import androidx.appcompat.app.AppCompatActivity;
 
 public class Home extends AppCompatActivity {
-    private Button NewReminder;
-    private TextView Logout;
+    private Button newReminder;
+    private Button sendNow;
+    private Button upcomingReminders;
+    private TextView logout;
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_home_screen);
-        NewReminder = (Button) findViewById(R.id.newReminder);
-        NewReminder.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                onNewReminderClick();
-            }
+        newReminder = findViewById(R.id.newReminder);
+        newReminder.setOnClickListener(v -> onNewReminderClick());
+
+        sendNow = findViewById(R.id.sendNow);
+        sendNow.setOnClickListener(v -> onSendNowClick());
+
+        upcomingReminders = findViewById(R.id.upcomingReminders);
+        upcomingReminders.setOnClickListener(v -> {
+
         });
-        Logout = (TextView) findViewById(R.id.logout);
-        Logout.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                launchLogin();
-            }
-        });
+
+        logout = findViewById(R.id.logout);
+        logout.setOnClickListener(v -> launchLogin());
     }
 
+    public void upcomingRemindersAction() {
+        Intent i = new Intent(this, Upcoming.class);
+        startActivity(i);
+    }
+
+    public void onSendNowClick() {
+        Intent intent = new Intent(this, SendNow.class);
+        startActivity(intent);
+    }
 
     public void onNewReminderClick()
     {
-        //Log.d("BUG", "NReminder executed, but probably crashed");
         Intent intent = new Intent(this, SetReminder.class);
         startActivity(intent);
     }
@@ -44,4 +54,5 @@ public class Home extends AppCompatActivity {
         startActivity(intent);
         finish();
     }
+
 }

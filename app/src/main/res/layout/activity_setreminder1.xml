@@ -11,16 +11,17 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:gravity="center"
-        android:layout_marginTop="300dp">
+        android:layout_marginTop="150dp">
 
 
         <EditText
             android:id="@+id/e1"
             android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:layout_gravity="center"
+            android:inputType="textLongMessage"
+            android:layout_height="193dp"
             android:hint="@string/Reminder_Prompt"
-            tools:visibility="visible" />
+            tools:visibility="visible"
+            android:autofillHints="Message" />
     </LinearLayout>
 
     <LinearLayout
@@ -35,24 +36,23 @@
             android:layout_height="wrap_content"
             android:layout_width="wrap_content"
             android:layout_weight="1"
-            android:text="Set Date/Time"
+            android:text="@string/set_datetime"
             android:onClick="showTimePickerDialog"/>
         <Button
             android:id="@+id/cancelButton"
             android:layout_height="wrap_content"
             android:layout_width="wrap_content"
             android:layout_weight="0"
-            android:text="Cancel" />
-
+            android:text="@string/cancel" />
         <Button
             android:id="@+id/save"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_weight="0"
-            android:text="save" />
+            android:text="@string/save" />
     </LinearLayout>
 
-    <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    <LinearLayout
         android:orientation="vertical"
         android:layout_width="fill_parent"
         android:layout_height="fill_parent">
@@ -66,10 +66,5 @@
             android:layout_height="wrap_content"
             android:text="@string/discord"
             android:layout_gravity="center" />
-        <CheckBox android:id="@+id/checkbox_sim"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:text="@string/simulatesend"
-            android:layout_gravity="center"/>
     </LinearLayout>
 </LinearLayout>

@@ -27,10 +27,10 @@
             android:layout_marginStart="43dp"
             android:layout_marginTop="94dp"
             android:background="@android:color/white"
-            android:hint="Email"
+            android:hint="@string/prompt_email"
             android:textAlignment="textStart"
-            android:layout_alignParentLeft="true"
-            android:layout_marginLeft="43dp"
+            
+            
             android:gravity="start"
             android:layout_gravity="start" />
 
@@ -42,12 +42,10 @@
             android:layout_alignParentEnd="true"
             android:layout_marginTop="26dp"
             android:layout_marginEnd="35dp"
-            android:text="Create an account"
+            android:text="@string/create_an_account"
             android:textAlignment="center"
             android:textColor="@android:color/white"
-            android:textSize="25dp"
-            android:layout_alignParentRight="true"
-            android:layout_marginRight="35dp"
+            android:textSize="25sp"
             android:gravity="center_horizontal" />
 
         <TextView
@@ -60,10 +58,10 @@
             android:layout_marginStart="43dp"
             android:layout_marginTop="147dp"
             android:background="@android:color/white"
-            android:hint="Username"
+            android:hint="@string/username"
             android:textAlignment="textStart"
-            android:layout_alignParentLeft="true"
-            android:layout_marginLeft="43dp"
+            
+            
             android:gravity="start" />
 
         <TextView
@@ -76,10 +74,10 @@
             android:layout_marginStart="43dp"
             android:layout_marginBottom="175dp"
             android:background="@android:color/white"
-            android:hint="Password"
+            android:hint="@string/prompt_password"
             android:textAlignment="textStart"
-            android:layout_alignParentLeft="true"
-            android:layout_marginLeft="43dp"
+            
+            
             android:gravity="start" />
 
         <androidx.cardview.widget.CardView
@@ -94,8 +92,8 @@
             app:cardBackgroundColor="#1847BC"
             app:cardCornerRadius="25dp"
             app:cardElevation="10dp"
-            android:layout_alignParentRight="true"
-            android:layout_marginRight="23dp">
+            
+            >
 
             <RelativeLayout
                 android:layout_width="match_parent"
@@ -106,7 +104,7 @@
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:layout_centerInParent="true"
-                    android:text="Continue"
+                    android:text="@string/continue_label"
                     android:textColor="@android:color/white"
                     android:textSize="16sp" />
             </RelativeLayout>
@@ -120,10 +118,9 @@
             android:layout_alignParentBottom="true"
             android:layout_marginStart="60dp"
             android:layout_marginBottom="65dp"
-            android:text="Already have an account?"
+            android:text="@string/already_have_an_account"
             android:textColor="@android:color/white"
-            android:layout_alignParentLeft="true"
-            android:layout_marginLeft="60dp" />
+             />
 
     </RelativeLayout>
 </RelativeLayout>
