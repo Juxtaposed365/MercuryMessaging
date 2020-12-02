@@ -36,4 +36,5 @@
     <string name="send_reminder_now">Send Reminder Now</string>
     <string name="log_out">Log Out</string>
     <string name="phone_number">Phone number</string>
+    <string name="no_reminders_scheduled">No reminders scheduled.</string>
 </resources>

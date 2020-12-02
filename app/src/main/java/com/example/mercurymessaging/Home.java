@@ -25,9 +25,7 @@ public class Home extends AppCompatActivity {
         sendNow.setOnClickListener(v -> onSendNowClick());
 
         upcomingReminders = findViewById(R.id.upcomingReminders);
-        upcomingReminders.setOnClickListener(v -> {
-
-        });
+        upcomingReminders.setOnClickListener(v -> upcomingRemindersAction());
 
         logout = findViewById(R.id.logout);
         logout.setOnClickListener(v -> launchLogin());

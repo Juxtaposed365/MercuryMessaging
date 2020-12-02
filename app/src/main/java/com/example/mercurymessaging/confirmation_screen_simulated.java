@@ -105,7 +105,10 @@ public class confirmation_screen_simulated extends AppCompatActivity {
             db.collection("Users")
             .document(name)
             .set(user)
-            .addOnSuccessListener(aVoid -> Log.d("BUG", "Document written successfully."))
+            .addOnSuccessListener(aVoid -> {
+                Log.d("BUG", "Document written successfully.");
+                Upcoming.setUserCache(name);
+            })
             .addOnFailureListener(e -> Log.w("BUG", "Error when adding document"));
 
             return null;

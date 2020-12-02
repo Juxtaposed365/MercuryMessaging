@@ -14,42 +14,50 @@ import com.google.firebase.firestore.DocumentReference;
 import com.google.firebase.firestore.DocumentSnapshot;
 import com.google.firebase.firestore.FirebaseFirestore;
 
+import org.w3c.dom.Text;
+
 import java.util.Map;
 
 public class Upcoming extends AppCompatActivity {
-    private String user = "";
+    private static String userCache = "";
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_upcoming);
 
-        if(!user.equals("")) {
+        if(!userCache.equals("")) {
             // fetch data if user set
             FirebaseFirestore db = FirebaseFirestore.getInstance();
-            db.collection("Users").document(user).get()
-                    .addOnCompleteListener(new OnCompleteListener<DocumentSnapshot>() {
-                        @Override
-                        public void onComplete(@NonNull Task<DocumentSnapshot> task) {
-                            if (task.isSuccessful()) {
-                                DocumentSnapshot document = task.getResult();
-                                if (document.exists()) {
-                                    Log.d("BUG", "DocumentSnapshot data: " + document.getData());
-                                    TextView text = findViewById(R.id.reminder);
-                                    text.setText(document.getData().toString());
-                                } else {
-                                    Log.d("BUG", "No such document");
-                                }
+            db.collection("Users").document(userCache).get()
+                    .addOnCompleteListener(task -> {
+                        if (task.isSuccessful()) {
+                            DocumentSnapshot document = task.getResult();
+                            if (document.exists()) {
+                                Map<String, Object> user = document.getData();
+                                TextView text = findViewById(R.id.reminder);
+                                text.setText(user.get("AppointmentDate").toString());
+                                TextView time = findViewById(R.id.time);
+                                time.setText(user.get("TimeScheduled").toString());
+                                time.setVisibility(View.VISIBLE);
+                                TextView msg = findViewById(R.id.message);
+                                msg.setText(user.get("message").toString());
+                                msg.setVisibility(View.VISIBLE);
+                                TextView recipients = findViewById(R.id.recipients);
+                                recipients.setText(user.get("recipients").toString());
+                                recipients.setVisibility(View.VISIBLE);
                             } else {
-                                Log.d("BUG", "get failed with ", task.getException());
+                                Log.d("BUG", "No such document");
                             }
+                        } else {
+                            Log.d("BUG", "get failed with ", task.getException());
                         }
-                        });
-
-
+                    });
         }
-
     }
 
+    public static void setUserCache(String s) {
+        userCache = s;
+    }
 
 }
