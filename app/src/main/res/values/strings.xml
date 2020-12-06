@@ -11,8 +11,8 @@
     <string name="save">Save</string>
     <string name="schedule">Schedule</string>
     <string name="cancel">Cancel</string>
-    <string name="sms">SMS</string>
-    <string name="discord">Discord</string>
+    <string name="sms">Add SMS Number</string>
+    <string name="discord">Add Discord Link</string>
     <string name="simulatesend">SimulateSend</string>
     <string name="title_activity_login">LoginActivity</string>
     <string name="prompt_email">Email</string>
@@ -37,4 +37,5 @@
     <string name="log_out">Log Out</string>
     <string name="phone_number">Phone number</string>
     <string name="no_reminders_scheduled">No reminders scheduled.</string>
+    <string name="recipients">Recipients:</string>
 </resources>

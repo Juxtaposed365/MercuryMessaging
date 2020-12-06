@@ -58,16 +58,10 @@ public class TimeScheduling extends AppCompatActivity {
         String am_pm = (tp.getHour() < 12) ? "AM" : "PM";
         timeRep = hours + ":" + strMinutes + am_pm;
         dateRep = (dp.getMonth() + 1) + "/" + dp.getDayOfMonth() +"/" + dp.getYear();
-        Log.d("BUG", "timeRep-> " + timeRep);
-        Log.d("BUG", "dateRep-> " + dateRep);
-
-        //pass values to setReminder
-        //stored as key, value pairs
-        Intent i = new Intent(this, SetReminder.class);
-        i.putExtra("time", timeRep);
-        i.putExtra("date", dateRep);
-        startActivity(i);
+        Log.d("BUG", "timeRep -> " + timeRep);
+        Log.d("BUG", "dateRep -> " + dateRep);
+        SetReminder.setDate(dateRep);
+        SetReminder.setTime(timeRep);
         finish();
-        //go back to setReminder after passing the values along
     }
 }

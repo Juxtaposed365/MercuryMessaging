@@ -44,14 +44,18 @@
         android:textSize="20sp"
         />
     <TextView
-        android:id="@+id/ReminderServices"
+        android:id="@+id/recipientsTitle"
         android:layout_gravity="center"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:maxLines="1"
-        android:text="@string/reminder_services"
+        android:text="@string/recipients"
         android:textColor="#777"
         android:textSize="20sp" />
+    <ListView
+        android:id="@+id/confirmRecipients"
+        android:layout_width="match_parent"
+        android:layout_height="200dp"/>
     </LinearLayout>
     <LinearLayout
         android:id="@+id/btnLL"

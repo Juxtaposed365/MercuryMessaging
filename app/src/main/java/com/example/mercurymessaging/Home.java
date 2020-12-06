@@ -13,11 +13,17 @@ public class Home extends AppCompatActivity {
     private Button sendNow;
     private Button upcomingReminders;
     private TextView logout;
+    private static String user;
+    private TextView greeting;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_home_screen);
+        user = generateTestUser();
+
+        greeting = this.findViewById(R.id.greeting);
+        greeting.setText("Hello, " + user);
         newReminder = findViewById(R.id.newReminder);
         newReminder.setOnClickListener(v -> onNewReminderClick());
 
@@ -29,6 +35,14 @@ public class Home extends AppCompatActivity {
 
         logout = findViewById(R.id.logout);
         logout.setOnClickListener(v -> launchLogin());
+    }
+
+    public String generateTestUser() {
+        return "Test" + (int) (Math.random() * 1000);
+    }
+
+    public static String getUser() {
+        return user;
     }
 
     public void upcomingRemindersAction() {
